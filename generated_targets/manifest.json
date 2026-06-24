@@ -1,0 +1,115 @@
+{
+  "dpi": 300.0,
+  "targets": [
+    {
+      "type": "corner_fiducials",
+      "channels": "all",
+      "file": "corner_fiducials.png"
+    },
+    {
+      "type": "bullseye",
+      "channels": "all",
+      "file": "bullseye.png"
+    },
+    {
+      "type": "crosshair",
+      "channels": "all",
+      "file": "crosshair.png"
+    },
+    {
+      "type": "line_targets",
+      "channels": "all",
+      "file": "line_targets.png"
+    },
+    {
+      "type": "slanted_edge",
+      "angle_deg": 15,
+      "file": "slanted_edge_15.png"
+    },
+    {
+      "type": "cmyk_chart",
+      "channel": "C",
+      "file": "cmyk_chart_C.png"
+    },
+    {
+      "type": "cmyk_chart",
+      "channel": "M",
+      "file": "cmyk_chart_M.png"
+    },
+    {
+      "type": "cmyk_chart",
+      "channel": "Y",
+      "file": "cmyk_chart_Y.png"
+    },
+    {
+      "type": "cmyk_chart",
+      "channel": "K",
+      "file": "cmyk_chart_K.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "CM",
+      "file": "overprint_CM.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "CY",
+      "file": "overprint_CY.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "MY",
+      "file": "overprint_MY.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "CK",
+      "file": "overprint_CK.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "MK",
+      "file": "overprint_MK.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "YK",
+      "file": "overprint_YK.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "CMY",
+      "file": "overprint_CMY.png"
+    },
+    {
+      "type": "overprint_patch",
+      "combo": "CMYK",
+      "file": "overprint_CMYK.png"
+    },
+    {
+      "type": "synthetic_misregistration",
+      "variant": "reference",
+      "file": "synthetic_misreg_reference.png"
+    },
+    {
+      "type": "synthetic_misregistration",
+      "variant": "C",
+      "file": "synthetic_misreg_C.png"
+    },
+    {
+      "type": "synthetic_misregistration",
+      "variant": "M",
+      "file": "synthetic_misreg_M.png"
+    },
+    {
+      "type": "synthetic_misregistration",
+      "variant": "Y",
+      "file": "synthetic_misreg_Y.png"
+    },
+    {
+      "type": "synthetic_misregistration",
+      "variant": "K",
+      "file": "synthetic_misreg_K.png"
+    }
+  ]
+}

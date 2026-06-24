@@ -1,0 +1,55 @@
+# Hardware-agnostic default configuration
+# All device-specific values are overridden at runtime from TIFF metadata,
+# calibration targets, or explicit CLI arguments.
+
+scanner:
+  # dpi read from TIFF XResolution tag at runtime; this is only a fallback
+  fallback_dpi: 300
+  bit_depth: 8          # overridden from TIFF BitsPerSample
+  color_space: "RGB"    # overridden from TIFF PhotometricInterpretation
+
+channels:
+  names: ["C", "M", "Y", "K"]
+  reference: "K"
+  optional: ["O", "G"]
+
+# RGB channel index used to extract each separation from a scanned composite
+channel_extraction:
+  C: 0   # Red channel isolates Cyan separation
+  M: 1   # Green channel isolates Magenta separation
+  Y: 2   # Blue channel isolates Yellow separation
+  K: null  # K estimated as complement of composite lightness
+
+ncc:
+  max_shift_px: 50        # maximum search radius in pixels
+  subpixel_method: "gaussian"  # "gaussian" | "parabolic"
+  min_peak_value: 0.3     # NCC peak below this -> low confidence
+
+fiducial:
+  min_marks: 4
+  recommended_marks: 8
+  threshold_method: "otsu"   # "otsu" | "adaptive" | "fixed"
+  threshold_fixed: 128
+  min_area_px: 20
+  max_area_px: 50000
+
+aggregation:
+  n_sheets: 3
+  n_scans_per_sheet: 3
+  confidence_level: 0.95
+
+colorimetric:
+  illuminant: "D50"
+  observer: "2"
+  kL: 1.0
+  kC: 1.0
+  kH: 1.0
+
+demo_mode:
+  enabled: true
+  synthetic_dpi: 300
+  default_shift_px:
+    C: [1.5, -0.8]
+    M: [-0.5, 1.2]
+    Y: [2.0, 0.3]
+    K: [0.0, 0.0]
